@@ -64,24 +64,7 @@
                     </tr>
                 </tbody>
             </table>
-        </section>
-        <section id="bagian-2">
-            <h2>Tambah Game</h2>
-            <form action="/Tambah game" method="post" novalidate>
-                <fieldset>
-                    <legend> Daftar Game</legend>
-                    <label for="nama">Nama Game</label>
-                    <input id="nama"></input>
-                    <label for="Dev">Developer</label>
-                    <input id="Dev"></input>
-                    <label for="Rate">Rating</label>
-                    <input id="Rate"></input>
-                    <button type="submit">Tambahkan</button>
-                </fieldset>
-            </form>
-        </section>
-
-        <figure>
+             <figure>
 
             <img src="https://thumb.wikimedia.org/wikipedia/en/thumb/5/5a/Clair_Obscur%2C_Expedition_33_Cover_1.webp/250px-Clair_Obscur%2C_Expedition_33_Cover_1.webp?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnai"
             alt = "poster game Clair Obscur: Expedition 33 yang memperlihatkan sekelompok karakter berhadapan dengan struktur raksasa" width="640" height="360" loading="lazy">
@@ -92,6 +75,27 @@
             <figcaption> (Gambar 2) Game Mobile Legend : Bang Bang</figcaption>
 
         </figure>
+        </section>
+        <section id="bagian-2">
+            <h2>Tambah Game</h2>
+            <form action="/Simpan" method="post" novalidate>
+                <p>
+                    <label for="nama-game">Nama Game</label>
+                    <input type="text" id="nama-game" name="Nama Game" required>
+                </p>
+                <p>
+                    <label for="nama-Developer">Nama Developer</label>
+                    <input type="text" id="nama-Developer" name="Nama Developer" required>
+                </p>
+                <p>
+                    <label for="rating">Rating</label>
+                    <input type="number" id="rating" name="rating" required>
+                </p>
+                    <button type="submit">Simpan</button>
+            </form>
+        </section>
+
+       
 
     </main>
   <!-- TODO C.2: buat <main> di sini sebagai pembungkus semua bagian isi.
