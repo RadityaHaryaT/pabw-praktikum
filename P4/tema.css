@@ -3,7 +3,7 @@
   :root {
     --color-bg:      #0F172A;
     --color-fg:      #E2E8F0;
-    --color-surface: #bcbdbe;
+    --color-surface: #ffffff;
     --color-border:  #334155;
     --color-primary: #2d56ed;   /* versi lebih terang agar kontras tetap lolos */
     --color-danger:  #FF8A8A;
@@ -18,7 +18,7 @@
 :root:has(#tema:checked) {
   --color-bg:      #f5f6f9;
   --color-fg:      #16273d;
-  --color-surface: #bcbdbe;
+  --color-surface: #ffffff;
   --color-border:  #000000;
   --color-primary: #2d56ed;
   --color-danger:  #FF8A8A;

@@ -40,7 +40,7 @@ main {
  
 .kartu {
   flex: 1 1 16rem;              /* tumbuh, menyusut, lebar dasar 16rem */
-  background: var(--color-surface);
+  background: #6a25b5;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-1);
