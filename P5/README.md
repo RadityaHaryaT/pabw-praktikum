@@ -9,4 +9,4 @@
 |baris ketiga | auto |
 |kolom isi | 16rem 1fr |
  
-
+Kriteria Selesai : Halaman terlihat rapih sesuai harapan 
