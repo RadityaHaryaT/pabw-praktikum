@@ -45,71 +45,83 @@
     </div>
     </header>
  
-    <main>
-        <section id="bagian-1">
-            <h2>Daftar Game</h2>
-            <table border="1">
-                <caption> Daftar Game </caption>
-                <thead> 
-                    <tr>
-                        <th scope="col"> - Nama Game - </th>
-                        <th scope="col"> - Developer - </th>
-                        <th scope="col"> - Rating -/10 - </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td scope="row">Roblox</td>
-                        <td scope="row">Roblox Corp. </td>
-                        <td scope="row"> 5 </td>
-                    </tr>
-                    <tr>
-                        <td scope="row">Mobile Legend : Bang Bang</td>
-                        <td scope="row">Moonton </td>
-                        <td scope="row"> 7 </td>
-                    </tr>
-                    <tr>
-                        <td scope="row">Clair Obscure : Expedition 33</td>
-                        <td scope="row">Sandfall Interactive </td>
-                        <td scope="row"> 9 </td>
-                    </tr>
-                </tbody>
+    <div class="isi">
+        <section id="bagian-1" class="sisi">
+          <h2>Daftar Game</h2>
+          
+          <div class="kartu">
+            <table class="tabel-game">
+              <caption>Daftar Game Pilihan</caption>
+              <thead> 
+                <tr>
+                  <th scope="col">Nama Game</th>
+                  <th scope="col">Developer</th>
+                  <th scope="col">Rating (/10)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Roblox</td>
+                  <td>Roblox Corp.</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Mobile Legend : Bang Bang</td>
+                  <td>Moonton</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>Clair Obscure : Expedition 33</td>
+                  <td>Sandfall Interactive</td>
+                  <td>9</td>
+                </tr>
+              </tbody>
             </table>
-            <article class="galeri">
-             <figure class="kartu">
+          </div>
 
-            <img src="Gambar_Clair_Obscure.webp"
-            alt = "poster game Clair Obscur: Expedition 33 yang memperlihatkan sekelompok karakter berhadapan dengan struktur raksasa" width="320" height="120" loading="lazy">
-            <figcaption> (Gambar 1) Game Clair Obscure : Expedition 33</figcaption>
-             </figure>
-                <figure class="kartu">
-                     <img src="Gambar_mobile_legends.jpg"
-                         alt = "poster game Mobile Legend : Bang Bang yang memperlihatkan karakter pada game sedang memanah." width="320" height="120" loading="lazy">
-                         <figcaption> (Gambar 2) Game Mobile Legend : Bang Bang</figcaption>
-                 </figure>
-        </article>
+          <div class="galeri">
+            <figure class="kartu">
+              <img src="Gambar_Clair_Obscure.webp" 
+                alt = "poster game Clair Obscur: Expedition 33 yang memperlihatkan sekelompok karakter berhadapan dengan struktur raksasa" width="320" height="120" loading="lazy">
+              <div class="kartu__kaki">
+                <figcaption>(Gambar 1) Clair Obscure : Expedition 33</figcaption>
+              </div>
+            </figure>
+            
+            <figure class="kartu">
+              <img src="Gambar_mobile_legends.jpg" 
+              alt = "poster game Mobile Legend : Bang Bang yang memperlihatkan karakter pada game sedang memanah." width="320" height="120" loading="lazy">
+              <div class="kartu__kaki">
+                <figcaption>(Gambar 2) Mobile Legend : Bang Bang</figcaption>
+              </div>
+            </figure>
+          </div>
         </section>
-        <section id="bagian-2">
-            <h2>Tambah Game</h2>
-            <form action="/Simpan" method="post" novalidate>
-                <div class="form-kolom">
-                    <label for="nama-game">Nama Game</label>
-                    <input type="text" id="nama-game" name="Nama Game" required>
-                    <span class="pesan-galat">Nama game wajib diisi.</span>
-                </div>
-                <div class="form-kolom">
-                    <label for="nama-Developer">Nama Developer</label>
-                    <input type="text" id="nama-Developer" name="Nama Developer" required>
-                    <span class="pesan-galat">Nama developer wajib diisi.</span>
-                </div>
-                <div class="form-kolom">
-                    <label for="rating">Rating</label>
-                    <input type="number" id="rating" name="rating" min="1" max="10" required>
-                    <span class="pesan-galat">Rating wajib diisi angka 1 - 10.</span>
-                </div>
-                    <button type="submit">Simpan</button>
-            </form>
+       <section id="bagian-2" class="utama">
+          <h2>Tambah Game</h2>
+          <form action="/Simpan" method="post" novalidate class="kartu">
+            <div class="form-kolom">
+              <label for="nama-game">Nama Game</label>
+              <input type="text" id="nama-game" name="Nama Game" required>
+              <span class="pesan-galat">Nama game wajib diisi.</span>
+            </div>
+            
+            <div class="form-kolom">
+              <label for="nama-Developer">Nama Developer</label>
+              <input type="text" id="nama-Developer" name="Nama Developer" required>
+              <span class="pesan-galat">Nama developer wajib diisi.</span>
+            </div>
+            
+            <div class="form-kolom">
+              <label for="rating">Rating</label>
+              <input type="number" id="rating" name="rating" min="1" max="10" required>
+              <span class="pesan-galat">Rating wajib diisi angka 1 - 10.</span>
+            </div>
+            
+            <button type="submit">Simpan</button>
+          </form>
         </section>
+      </div>
 
     </main>
  

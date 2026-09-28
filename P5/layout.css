@@ -26,10 +26,13 @@ nav a {
 nav a:hover { text-decoration: underline; }
 
 main {
-  display: flex;
+display: flex;
   flex-direction: column;
-  gap: var(--section-gap);      /* jarak antar bagian, tanpa margin */
-  padding-block: var(--space-6);
+  gap: var(--section-gap);
+  padding: var(--space-6) var(--space-4);
+  max-width: 60rem;
+  margin-inline: auto; 
+  width: 100%;
 }
  
 .katalog {
@@ -62,16 +65,23 @@ main {
 
 .isi {
   display: grid;
-  grid-template-columns: 16rem 1fr;
-  grid-template-areas:
-    "sisi utama"
-    "sisi bawah";
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: var(--space-6);
 }
-.sisi  { grid-area: sisi; }
-.utama { grid-area: utama; }
 
-.sorotan { grid-column: span 2; }
-.papan    { grid-row: span 2; }
+.sisi {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.utama {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  height: fit-content;
+}
+
 
 
  
