@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+  KERANGKA AWAL — Halaman Profil Saya
+  PABW 2026/2027 · Pertemuan 3
+
+  Cara pakai:
+  1. Salin berkas ini, ganti nama menjadi profil.html
+  2. Ganti setiap tulisan TODO dengan isi milik Anda SENDIRI
+  3. Simpan, lalu buka di peramban (F5 untuk memuat ulang)
+  4. Kerjakan berurutan mengikuti Lembar B, C, D, dan E pada worksheet
+
+  Jangan menghapus komentar TODO sebelum bagian itu Anda kerjakan —
+  komentar itu adalah daftar periksa Anda sendiri.
+-->
+<html lang="id">
+    
+<head>
+  <title>Penilaian Game yang Pernah Saya Mainkan</title>
+    <meta charset="utf-8">
+    <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="komponen.css">
+    <link rel="stylesheet" href="tema.css">
+
+
+</head>
+<body>
+    <div class="page">
+    <header>
+        <input type="checkbox" id="tema" class="pengalih-tema">
+        <label for="tema" class="tombol-tema">Tema Terang / Gelap </label>
+    <div class ="header-baris">
+    <h1>Game Terbaik Berdasarkan Pengalaman Pribadi </h1>
+        <nav aria-label="Utama"></nav>
+        <nav class ="navbar">
+        <ul class ="nav-links">
+            <li><a href="#bagian-1">Daftar Game</a></li>
+            <li><a href="#bagian-2">Tambah Game</a></li>
+            <li><a href="#bagian-3">Tentang Saya</a></li>
+        </ul>
+        </nav>
+    </div>
+    </header>
+ 
+    <div class="isi">
+        <section id="bagian-1" class="sisi">
+          <h2>Daftar Game</h2>
+          
+          <div class="kartu">
+            <table class="tabel-game">
+              <caption>Daftar Game Pilihan</caption>
+              <thead> 
+                <tr>
+                  <th scope="col">Nama Game</th>
+                  <th scope="col">Developer</th>
+                  <th scope="col">Rating (/10)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Roblox</td>
+                  <td>Roblox Corp.</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Mobile Legend : Bang Bang</td>
+                  <td>Moonton</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>Clair Obscure : Expedition 33</td>
+                  <td>Sandfall Interactive</td>
+                  <td>9</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="galeri">
+            <figure class="kartu">
+              <img src="Gambar_Clair_Obscure.webp" 
+                alt = "poster game Clair Obscur: Expedition 33 yang memperlihatkan sekelompok karakter berhadapan dengan struktur raksasa" width="320" height="120" loading="lazy">
+              <div class="kartu__kaki">
+                <figcaption>(Gambar 1) Clair Obscure : Expedition 33</figcaption>
+              </div>
+            </figure>
+            
+            <figure class="kartu">
+              <img src="Gambar_mobile_legends.jpg" 
+              alt = "poster game Mobile Legend : Bang Bang yang memperlihatkan karakter pada game sedang memanah." width="320" height="120" loading="lazy">
+              <div class="kartu__kaki">
+                <figcaption>(Gambar 2) Mobile Legend : Bang Bang</figcaption>
+              </div>
+            </figure>
+          </div>
+        </section>
+       <section id="bagian-2" class="utama">
+          <h2>Tambah Game</h2>
+          <form action="/Simpan" method="post" novalidate class="kartu">
+            <div class="form-kolom">
+              <label for="nama-game">Nama Game</label>
+              <input type="text" id="nama-game" name="Nama Game" required>
+              <span class="pesan-galat">Nama game wajib diisi.</span>
+            </div>
+            
+            <div class="form-kolom">
+              <label for="nama-Developer">Nama Developer</label>
+              <input type="text" id="nama-Developer" name="Nama Developer" required>
+              <span class="pesan-galat">Nama developer wajib diisi.</span>
+            </div>
+            
+            <div class="form-kolom">
+              <label for="rating">Rating</label>
+              <input type="number" id="rating" name="rating" min="1" max="10" required>
+              <span class="pesan-galat">Rating wajib diisi angka 1 - 10.</span>
+            </div>
+            
+            <button type="submit">Simpan</button>
+          </form>
+        </section>
+      </div>
+
+    </main>
+ 
+<footer>
+    <section id="bagian-3">
+    Raditya Harya Triatmaja
+    25523170 
+    2026/2027
+    </section>
+</footer>
+</div>
+</body>
+</html>
