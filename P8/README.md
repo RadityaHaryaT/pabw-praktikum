@@ -1,12 +1,8 @@
-## Pertemuan 5 — Design Layout halaman profil 
+## Pertemuan 8 — JavaScript
  
-### Kerangka yang saya tetapkan
- 
-| Bagian halaman | Nilai |
-|---|---|
-|baris Pertama | auto |
-|baris kedua | 1fr |
-|baris ketiga | auto |
-|kolom isi | 16rem 1fr |
- 
-Kriteria Selesai : Halaman terlihat rapih sesuai harapan 
+| Data | Nama variabel yang saya pakai | Contoh isi |
+|---|---|---|---|
+|Nama lengkap | nama | Raditya Harya Triatmaja |
+|Kalimat peran | peran | Mahasiswa Informatika yang belajar front-end |
+| Daftar keahlian (minimal tiga) | keahlian | "HTML", "CSS", "JavaScript"|
+|Satu nilai angka yang dipakai nanti | jumlahProyek | 3 |
