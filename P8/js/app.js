@@ -37,5 +37,3 @@ let proyekTersaring = daftarProyek.filter((proyek) => proyek.selesai);
 
 console.log(`Filter aktif: ${filterAktif}`);
 console.table(proyekTersaring);
-
-console.log(nilai);
