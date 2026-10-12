@@ -1,8 +1,8 @@
-## Pertemuan 8 — JavaScript
+## Pertemuan 9 — Front-end Foundation (DOM, Event, dan Interaktivitas)
  
-| Data | Nama variabel yang saya pakai | Contoh isi |
-|---|---|---|---|
-|Nama lengkap | nama | Raditya Harya Triatmaja |
-|Kalimat peran | peran | Mahasiswa Informatika yang belajar front-end |
-| Daftar keahlian (minimal tiga) | keahlian | "HTML", "CSS", "JavaScript"|
-|Satu nilai angka yang dipakai nanti | jumlahProyek | 3 |
+| Bagian halaman | Pemilih yang saya pakai | Diisi apa | Nama variabel |
+| :--- | :--- | :--- | :--- |
+| **Daftar proyek** | `#daftar-game` | Baris tabel (`<tr>` dan `<td>`) daftar game | `wadah` |
+| **Baris tombol filter** | `#filter` | Event listener klik untuk menyaring kategori | `barisFilter` |
+| **Pesan daftar kosong** | `#pesan-kosong` | Status tampilan (`hidden = true/false`) | `pesanKosong` |
+| **Form dan tiap kolomnya** | `#form-game` | Event handler submit dan validasi input | `formGame` |
