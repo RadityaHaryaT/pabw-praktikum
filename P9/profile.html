@@ -49,36 +49,41 @@
         <section id="bagian-1" class="sisi">
           <h2>Daftar Game</h2>
           
+          <div id="filter" class="baris-filter">
+            <button type="button" data-kategori="semua" class="aktif">Semua</button>
+            <button type="button" data-kategori="Mobile">Mobile</button>
+            <button type="button" data-kategori="PC/Console">PC/Console</button>
+          </div>
+
           <div class="kartu">
             <table class="tabel-game">
               <caption>Daftar Game Pilihan</caption>
               <thead> 
                 <tr>
                   <th scope="col">Nama Game</th>
-                  <th scope="col">Developer</th>
+                  <th scope="col">Tahun</th>
                   <th scope="col">Rating (/10)</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="daftar-game">
                 <tr>
                   <td>Roblox</td>
-                  <td>Roblox Corp.</td>
+                  <td>2006</td>
                   <td>5</td>
                 </tr>
                 <tr>
                   <td>Mobile Legend : Bang Bang</td>
-                  <td>Moonton</td>
+                  <td>2016</td>
                   <td>7</td>
                 </tr>
                 <tr>
                   <td>Clair Obscure : Expedition 33</td>
-                  <td>Sandfall Interactive</td>
+                  <td>2025</td>
                   <td>9</td>
                 </tr>
               </tbody>
             </table>
           </div>
-
           <div class="galeri">
             <figure class="kartu">
               <img src="Gambar_Clair_Obscure.webp" 
@@ -95,11 +100,12 @@
                 <figcaption>(Gambar 2) Mobile Legend : Bang Bang</figcaption>
               </div>
             </figure>
-          </div>
+            </div>
+              <p id ="pesan-Kosong" hidden>Tidak ada data game yang sesuai dengan filter ini</p>
         </section>
        <section id="bagian-2" class="utama">
           <h2>Tambah Game</h2>
-          <form action="/Simpan" method="post" novalidate class="kartu">
+          <form action="/Simpan" method="post" novalidate id="form-game" class="kartu">
             <div class="form-kolom">
               <label for="nama-game">Nama Game</label>
               <input type="text" id="nama-game" name="Nama Game" required>
@@ -107,9 +113,9 @@
             </div>
             
             <div class="form-kolom">
-              <label for="nama-Developer">Nama Developer</label>
-              <input type="text" id="nama-Developer" name="Nama Developer" required>
-              <span class="pesan-galat">Nama developer wajib diisi.</span>
+              <label for="tahun-rilis">Tahun Rilis</label>
+              <input type="number" id="tahun-rilis" name="Tahun Rilis" required>
+              <span class="pesan-galat">Tahun RIlis Game wajib diisi.</span>
             </div>
             
             <div class="form-kolom">
@@ -133,7 +139,8 @@
     </section>
 </footer>
 </div>
-  <script type="module" src="js/dom.js"></script>
+  
   <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/dom.js"></script>
 </body>
 </html>

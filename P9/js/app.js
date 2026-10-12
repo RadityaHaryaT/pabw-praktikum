@@ -3,7 +3,7 @@ const profil = {
   peran: "Mahasiswa Informatika yang belajar front-end",
   keahlian: ["HTML", "CSS", "JavaScript"]
 };
-const jumlahProyek = 3;
+const jumlahGame = 3;
 
 const kalimat = `Nama saya ${profil.nama}, dan saya belajar ${profil.keahlian.length} hal.`;
 console.log(kalimat);
@@ -17,23 +17,25 @@ const formatKeahlian = (daftar) => daftar.join(" · ");
 console.log(buatPerkenalan(profil));
 console.log(formatKeahlian(profil.keahlian));
 
-const daftarProyek = [
-  { judul: "Halaman Profil", tahun: 2026, selesai: true },
-  { judul: "Katalog Produk", tahun: 2026, selesai: false },
-  { judul: "Aplikasi Kasir", tahun: 2026, selesai: true }
+const daftarGame = [
+  { judul: "Clair Obscure : Expedition 33", tahun: 2025, rating: 9, kategori: "PC/Console" },
+  { judul: "Mobile Legend : Bang Bang", tahun: 2016, rating: 7, kategori: "Mobile" },
+  { judul: "ROBLOX", tahun: 2006, rating: 5, kategori: "PC/Console" }
 ];
 
 console.table(profil.keahlian);
-console.table(daftarProyek);
+console.table(daftarGame);
 
-const selesai = daftarProyek.filter((proyek) => proyek.selesai);
+const selesai = daftarGame.filter((proyek) => proyek.selesai);
 console.table(selesai);
 
-const katalog = daftarProyek.find((proyek) => proyek.judul === "Katalog Produk");
+const katalog = daftarGame.find((proyek) => proyek.judul === "Katalog Produk");
 console.log(katalog);
 
-let filterAktif = "selesai";
-let proyekTersaring = daftarProyek.filter((proyek) => proyek.selesai);
+let filterAktif = "semua";
+let proyekTersaring = daftarGame.filter((proyek) => proyek.selesai);
 
 console.log(`Filter aktif: ${filterAktif}`);
 console.table(proyekTersaring);
+
+window.daftarGame = daftarGame;
