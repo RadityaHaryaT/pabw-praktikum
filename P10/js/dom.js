@@ -1,4 +1,7 @@
 const wadah = document.querySelector("#daftar-game");
+const pesanKosong = document.querySelector("#pesan-Kosong");
+const muatEl = document.querySelector("#muat");
+const barisFilter = document.querySelector("#filter");
 
 function buatBarisGame(game) {
   const tr = document.createElement("tr");
@@ -16,67 +19,52 @@ function buatBarisGame(game) {
   return tr;
 }
 
-
-function render(daftar) {
+export function render(daftar) {
   if (!wadah) return;
-  
   wadah.textContent = ""; 
 
-  if (daftar.length === 0) {
-    if (pesanKosong) pesanKosong.hidden = false;
+  if (!daftar || daftar.length === 0) {
+    if (pesanKosong) {
+      pesanKosong.textContent = "Tidak ada data game yang sesuai.";
+      pesanKosong.hidden = false;
+    }
     return;
   }
 
   if (pesanKosong) pesanKosong.hidden = true;
-  
-
   daftar.forEach((game) => wadah.append(buatBarisGame(game)));
 }
 
+export function aturMemuat(aktif) {
+  if (muatEl) muatEl.hidden = !aktif;
+}
 
-const barisFilter = document.querySelector("#filter");
+export function tampilkanGalat(pesan) {
+  if (wadah) wadah.textContent = "";
+  if (pesanKosong) {
+    pesanKosong.textContent = pesan;
+    pesanKosong.hidden = false;
+  }
+}
 
-barisFilter.addEventListener("click", (event) => {
-  const tombol = event.target.closest("button");
-  if (!tombol) return;                
+export function pasangFilter(daftar) {
+  if (!barisFilter) return;
+  barisFilter.addEventListener("click", (event) => {
+    const tombol = event.target.closest("button");
+    if (!tombol) return;                
 
-  const kategori = tombol.dataset.kategori;
-  const terpilih = daftarGame.filter(
-    (game) => kategori === "semua" || game.kategori === kategori
-  );
+    const kategori = tombol.dataset.kategori;
+    const terpilih = daftar.filter(
+      (game) => kategori === "semua" || game.kategori === kategori
+    );
 
-  render(terpilih);
-  tandaiTombolAktif(tombol);
-});
-
-function tandaiTombolAktif(tombolAktif){
-  document.querySelectorAll("#filter button").forEach((Tombol) => {
-    Tombol.classList.toggle("aktif",Tombol === tombolAktif);
+    render(terpilih);
+    tandaiTombolAktif(tombol);
   });
 }
 
-const pesanKosong = document.querySelector("#pesan-Kosong");
-
-//render(daftarGame);
-
-
-const formGame = document.querySelector("#form-game");
-
-
-if (formGame) {
-  formGame.addEventListener("submit", (event) => {
-    event.preventDefault(); 
-    const inputNama = document.querySelector("#nama-game");
-    if (!inputNama) return;
-
-    const nilaiNama = inputNama.value.trim();
-
-    if (nilaiNama === "") {
-      inputNama.setAttribute("aria-invalid", "true");
-      return;
-    }
-
-    inputNama.setAttribute("aria-invalid", "false");
-    console.log("Form berhasil dikirim!");
+function tandaiTombolAktif(tombolAktif) {
+  document.querySelectorAll("#filter button").forEach((tombol) => {
+    tombol.classList.toggle("aktif", tombol === tombolAktif);
   });
 }

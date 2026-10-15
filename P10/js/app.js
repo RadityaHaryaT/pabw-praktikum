@@ -1,3 +1,6 @@
+import { ambilGame } from './api.js';
+import {render, pasangFilter, aturMemuat, tampilkanGalat} from './dom.js';
+
 const profil = {
   nama: "Raditya Harya Triatmaja",
   peran: "Mahasiswa Informatika yang belajar front-end",
@@ -39,6 +42,21 @@ console.log(`Filter aktif: ${filterAktif}`);
 //console.table(proyekTersaring);
 
 //window.daftarGame = daftarGame;
-
-import { ambilGame } from "./api.js";
 ambilGame().then((daftar) => console.log(daftar));
+
+async function muat() {
+  aturMemuat(true);                        // keadaan memuat
+  try {
+    const daftar = await ambilGame();    // 1. ambil (api.js)
+    pasangFilter(daftar);                  // 2. filter P9 memakai data ini
+    render(daftar);                        // 3. gambar (dom.js)
+  } catch (galat) {
+    tampilkanGalat('Data gagal dimuat. Periksa koneksi, lalu muat ulang halaman.');
+    console.error(galat.message);          // untuk Anda, bukan untuk pengguna
+  } finally {
+    aturMemuat(false);
+  }
+}
+ 
+muat();                                    // dipanggil sekali saat halaman dibuka
+ 
