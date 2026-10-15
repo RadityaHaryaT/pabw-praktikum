@@ -1,4 +1,4 @@
-const ALAMAT = 'data/daftarGame.json';
+const ALAMAT = 'https://raw.githubusercontent.com/RadityaHaryaT/pabw-praktikum/refs/heads/main/P10/data/daftarGame.json';
 
 export async function ambilGame(){
    try {
