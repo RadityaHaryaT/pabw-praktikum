@@ -57,7 +57,7 @@ function tandaiTombolAktif(tombolAktif){
 
 const pesanKosong = document.querySelector("#pesan-Kosong");
 
-render(daftarGame);
+//render(daftarGame);
 
 
 const formGame = document.querySelector("#form-game");

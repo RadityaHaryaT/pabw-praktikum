@@ -24,21 +24,21 @@ console.log(formatKeahlian(profil.keahlian));
 //];
 
 console.table(profil.keahlian);
-console.table(daftarGame);
+//.table(daftarGame);
 
-const selesai = daftarGame.filter((proyek) => proyek.selesai);
-console.table(selesai);
+//const selesai = daftarGame.filter((proyek) => proyek.selesai);
+//console.table(selesai);
 
-const katalog = daftarGame.find((proyek) => proyek.judul === "Katalog Produk");
-console.log(katalog);
+//const katalog = daftarGame.find((proyek) => proyek.judul === "Katalog Produk");
+//console.log(katalog);
 
 let filterAktif = "semua";
-let proyekTersaring = daftarGame.filter((proyek) => proyek.selesai);
+//let proyekTersaring = daftarGame.filter((proyek) => proyek.selesai);
 
 console.log(`Filter aktif: ${filterAktif}`);
-console.table(proyekTersaring);
+//console.table(proyekTersaring);
 
-window.daftarGame = daftarGame;
+//window.daftarGame = daftarGame;
 
 import { ambilGame } from "./api.js";
 ambilGame().then((daftar) => console.log(daftar));
