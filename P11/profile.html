@@ -50,38 +50,23 @@
           <h2>Daftar Game</h2>
           
           <div id="filter" class="baris-filter">
-            <button type="button" data-kategori="semua" class="aktif">Semua</button>
-            <button type="button" data-kategori="Mobile">Mobile</button>
-            <button type="button" data-kategori="PC/Console">PC/Console</button>
+              <button type="button" data-kategori="semua" class="aktif">Semua</button>
+              <button type="button" data-kategori="Mobile">Mobile</button>
+              <button type="button" data-kategori="PC/Console">PC/Console</button>
+              <button type="button" id="atur-ulang">Atur Ulang</button>
           </div>
             <p id="muat" hidden>memuat data...</p>
           <div class="kartu">
             <table class="tabel-game">
-              <caption>Daftar Game Pilihan</caption>
               <thead> 
                 <tr>
                   <th scope="col">Nama Game</th>
                   <th scope="col">Tahun</th>
                   <th scope="col">Rating (/10)</th>
+                  <th scope="col">Favorit</th>
                 </tr>
               </thead>
-              <tbody id="daftar-game">
-                <tr>
-                  <td>Roblox</td>
-                  <td>2006</td>
-                  <td>5</td>
-                </tr>
-                <tr>
-                  <td>Mobile Legend : Bang Bang</td>
-                  <td>2016</td>
-                  <td>7</td>
-                </tr>
-                <tr>
-                  <td>Clair Obscure : Expedition 33</td>
-                  <td>2025</td>
-                  <td>9</td>
-                </tr>
-              </tbody>
+                <tbody id="daftar-game"></tbody>
             </table>
           </div>
           <div class="galeri">
