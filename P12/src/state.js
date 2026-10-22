@@ -1,14 +1,16 @@
-// js/state.js
-import { render } from "./dom.js";
+// src/state.js
+import { reactive } from "vue";
 
 const KUNCI = "pabw-p11-raditya";
 const VERSI = 2;
 
-export const state = {
+export const state = reactive({
   daftarGame: [],
   kategoriAktif: "semua",
-  favorit: []
-};
+  favorit: [],
+  memuat: true,
+  galat: ""
+});
 
 export function simpan(stateData) {
   const isi = {
@@ -41,13 +43,10 @@ export function pulihkan(isi) {
 
 export function isiGame(daftar) {
   state.daftarGame = daftar;
-  render(state);
 }
 
 export function pilihKategori(kategori) {
   state.kategoriAktif = kategori;
-  simpan(state);
-  render(state);
 }
 
 export function tambahFavorit(id) {
@@ -56,13 +55,10 @@ export function tambahFavorit(id) {
   } else {
     state.favorit = [...state.favorit, id];
   }
-  simpan(state);
-  render(state);
 }
 
 export function aturUlang() {
   localStorage.removeItem(KUNCI);
   state.kategoriAktif = "semua";
   state.favorit = [];
-  render(state);
 }

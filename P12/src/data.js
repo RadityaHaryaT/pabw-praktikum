@@ -1,3 +1,4 @@
+// src/data.js
 export const profil = {
   nama: "Raditya Harya Triatmaja",
   peran: "Mahasiswa Informatika yang belajar front-end",
