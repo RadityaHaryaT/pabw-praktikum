@@ -1,8 +1,5 @@
-## Pertemuan 11 - Modul State , Penyimpanan Klien
+# Vue 3 + Vite
 
-Versi Node.js 
-node -v 24.22.0 LTS
-npm -v 11.19.1
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-Penggunaan AI : membantu mengerjakan Worksheet secara bertahap-tahap dan pendefinisian fungsi fungsi
-
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
